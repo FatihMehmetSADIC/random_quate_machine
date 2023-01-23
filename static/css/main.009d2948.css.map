@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/main.009d2948.css","mappings":"AAAA,WAEE,WAA2B,CAD3B,iBAEF","sources":["Quote.css"],"sourcesContent":["#quote-box {\n  text-align: center;\n  margin: 20px 20px 20px 20px;\n}\n"],"names":[],"sourceRoot":""}

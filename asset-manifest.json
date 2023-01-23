@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/random-quate-machine/static/css/main.009d2948.css",
+    "main.js": "/random-quate-machine/static/js/main.08584f92.js",
+    "index.html": "/random-quate-machine/index.html",
+    "main.009d2948.css.map": "/random-quate-machine/static/css/main.009d2948.css.map",
+    "main.08584f92.js.map": "/random-quate-machine/static/js/main.08584f92.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.009d2948.css",
+    "static/js/main.08584f92.js"
+  ]
+}
