@@ -1,23 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect, useState } from "react";
+import Quote from "./Quote.css";
 
 function App() {
+  const [quateinfo, setQuateInfo] = useState({});
+  useEffect(() => {
+    getQuote();
+  }, []);
+
+  const getQuote = () => {
+    fetch("https://api.quotable.io/random")
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        setQuateInfo({
+          text: data.content,
+          author: data.author,
+        });
+      });
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
+    <div className="app">
+      <div id="quote-box">
+        <p id="text">{quateinfo.text}</p>
+        <p id="author">{quateinfo.author}</p>
+        <button id="new-quote" onClick={getQuote}>
+          New Quote
+        </button>
         <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+          href={"https://twitter.com/intent/tweet?text=" + quateinfo.text}
+          id="tweet-quote"
         >
-          Learn React
+          Post to Twitter
         </a>
-      </header>
+      </div>
     </div>
   );
 }
